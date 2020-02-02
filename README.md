@@ -1,32 +1,21 @@
-# Travel
+# travel
 
-#### 介绍
+> A Vue.js project
 
-作者：、远方
+## Build Setup
 
-旅游项目
+``` bash
+# install dependencies
+npm install
 
-#### 软件架构
-软件架构说明
+# serve with hot reload at localhost:8080
+npm run dev
 
+# build for production with minification
+npm run build
 
-#### 安装教程
+# build for production and view the bundle analyzer report
+npm run build --report
+```
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
-6.  
+For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
