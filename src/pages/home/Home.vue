@@ -1,7 +1,7 @@
 <template>
   <div>
     <home-header></home-header>
-    <span>index-swiper-2</span>
+    <span>测试完成</span>
   </div>
 
 </template>
