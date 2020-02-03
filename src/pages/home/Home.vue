@@ -1,7 +1,6 @@
 <template>
   <div>
     <home-header></home-header>
-    <span>测试完成</span>
   </div>
 
 </template>
