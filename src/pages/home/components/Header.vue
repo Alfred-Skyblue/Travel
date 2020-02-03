@@ -3,7 +3,12 @@
    <div class="header-left">
      <div class="iconfont back-icon">&#xe624;</div>
    </div>
-   <div class="header-input"><span class="iconfont">&#xe632;</span>输入城市景点游玩主题</div>
+   <div class="header-input">
+     <span class="iconfont iconfont-search" v-show="show">&#xe632;</span>
+     <input type="text"
+       class="header-input-search"
+       placeholder="输入城市景点游玩主题" v-on:focus="handleFocus" v-on:blur="handleBlur">
+    </div>
    <router-link to="/city">
      <div class="header-right">{{ this.city }}<span class="iconfont arrow-icon">&#xe64a;</span></div>
    </router-link>
@@ -17,6 +22,24 @@ export default {
   name: 'HomeHeader',
   props: {
     city: String
+  },
+  data () {
+    return {
+      show: true
+    }
+  },
+  methods: {
+    handleFocus (el) {
+      this.show = false
+      el.target.placeholder = ''
+      el.target.style.textIndent = 0
+    },
+    handleBlur (el) {
+      if (el.target.value) return false
+      this.show = true
+      el.target.placeholder = '输入城市景点游玩主题'
+      el.target.style.textIndent = 0.4 + 'rem'
+    }
   }
 }
 </script>
@@ -44,6 +67,14 @@ export default {
    background: #fff
    border-radius: 0.1rem
    color:#ccc
+  .header-input-search
+    text-indent: 0.4rem
+    display: block
+    width: 100%;
+    height: 100%
+    border-radius: 0.1rem
+  .iconfont-search
+   position: absolute
  .header-right
   width: 1.24rem
   float: right
@@ -51,4 +82,5 @@ export default {
   color:#fff
   .arrow-icon
     font-size: 0.24rem
+
 </style>
