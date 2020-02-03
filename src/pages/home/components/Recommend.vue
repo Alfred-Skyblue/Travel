@@ -2,7 +2,7 @@
   <div>
     <div class="title">热销推荐</div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+      <li class="item border-bottom" v-for="item of list" :key="item.id">
         <img class="item-img" :src="item.imgUrl">
         <div class="item-info">
           <p class="item-title">{{ item.title }}</p>
@@ -17,38 +17,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [{
-        id: '001',
-        imgUrl: '//imgs.qunarzz.com/vs_ceph_vs_tts/e802ce19-7950-419c-b790-39fb364cf7f6.jpg_r_480x320x90_b8313d0d.jpg',
-        title: '北海当地游 6天自由行',
-        desc: '🔥火爆海岛游⊙北海+涠洲岛6日⊙赠赶海+海底世界/住香格里拉+船票+上岛费'
-
-      },
-      {
-        id: '002',
-        imgUrl: '//imgs.qunarzz.com/vs_ceph_vs_tts/e802ce19-7950-419c-b790-39fb364cf7f6.jpg_r_480x320x90_b8313d0d.jpg',
-        title: '北海当地游 6天自由行',
-        desc: '🔥火爆海岛游⊙北海+涠洲岛6日⊙赠赶海+海底世界/住香格里拉+船票+上岛费'
-
-      },
-      {
-        id: '003',
-        imgUrl: '//imgs.qunarzz.com/vs_ceph_vs_tts/e802ce19-7950-419c-b790-39fb364cf7f6.jpg_r_480x320x90_b8313d0d.jpg',
-        title: '北海当地游 6天自由行',
-        desc: '🔥火爆海岛游⊙北海+涠洲岛6日⊙赠赶海+海底世界/住香格里拉+船票+上岛费'
-
-      },
-      {
-        id: '004',
-        imgUrl: '//imgs.qunarzz.com/vs_ceph_vs_tts/e802ce19-7950-419c-b790-39fb364cf7f6.jpg_r_480x320x90_b8313d0d.jpg',
-        title: '北海当地游 6天自由行',
-        desc: '🔥火爆海岛游⊙北海+涠洲岛6日⊙赠赶海+海底世界/住香格里拉+船票+上岛费'
-
-      }
-      ]
-    }
+  props: {
+    list: Array
   }
 }
 </script>

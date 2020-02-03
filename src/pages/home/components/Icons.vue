@@ -16,70 +16,20 @@
 <script>
 export default {
   name: 'HomeIcons',
+  props: {
+    list: Array
+  },
   data () {
     return {
       swiperOption: {
         autoplay: false
-      },
-      iconList: [
-        {
-          id: '0001',
-          imgUrl: '//s.qunarzz.com/homenode/images/touchheader/flight.png',
-          desc: '门票'
-        },
-        {
-          id: '0002',
-          imgUrl: '//s.qunarzz.com/homenode/images/touchheader/train.png',
-          desc: '酒店'
-        },
-        {
-          id: '0003',
-          imgUrl: '//s.qunarzz.com/homenode/images/touchheader/piao.png',
-          desc: '机票'
-        },
-        {
-          id: '0004',
-          imgUrl: '//s.qunarzz.com/homenode/images/touchheader/hotel.png',
-          desc: '民宿'
-        },
-        {
-          id: '0005',
-          imgUrl: '//s.qunarzz.com/homenode/images/touchheader/package.png',
-          desc: '度假'
-        },
-        {
-          id: '0006',
-          imgUrl: 'https://picbed.qunarzz.com/377db8cb2143aebf01869c9baad3d325.png',
-          desc: '旅游'
-        },
-        {
-          id: '0007',
-          imgUrl: 'https://picbed.qunarzz.com/f5e5770393d759578962e53ee67798c8.png',
-          desc: '专车'
-        },
-        {
-          id: '0008',
-          imgUrl: '//s.qunarzz.com/homenode/images/touchheader/train.png',
-          desc: '攻略'
-        },
-        {
-          id: '0009',
-          imgUrl: '//s.qunarzz.com/homenode/images/touchheader/train.png',
-          desc: '景点门票'
-        },
-        {
-          id: '00010',
-          imgUrl: '//s.qunarzz.com/homenode/images/touchheader/train.png',
-          desc: '景点门票'
-        }
-      ]
+      }
     }
   },
-
   computed: {
     pages () {
       const pages = []
-      this.iconList.forEach((item, index) => {
+      this.list.forEach((item, index) => {
         const page = Math.floor(index / 8)
         if (!pages[page]) {
           pages[page] = []
