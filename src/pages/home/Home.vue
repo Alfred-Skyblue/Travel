@@ -1,7 +1,7 @@
 <template>
   <div>
     <home-header></home-header>
-
+    <span>index-swiper-2</span>
   </div>
 
 </template>
