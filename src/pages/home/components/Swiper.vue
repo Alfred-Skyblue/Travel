@@ -17,6 +17,8 @@ export default {
   data () {
     return {
       swiperOption: {
+        autoplayDisableOnInteraction: false,
+        autoplay: 3000,
         pagination: '.swiper-pagination',
         loop: true
       },
@@ -40,7 +42,7 @@ export default {
   overflow: hidden
   width: 100%
   height: 0
-  padding-bottom: 31.25%
+  padding-bottom: 30.5%
 
   .swiper-img
     width: 100%
