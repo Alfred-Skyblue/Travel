@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- 调用组件 -->
-    <home-header :city="city"></home-header>
+    <home-header></home-header>
     <home-swiper :list="swiperList"></home-swiper>
     <home-icons :list="iconList"></home-icons>
     <home-recommend :list="recommendList"></home-recommend>
@@ -31,7 +31,6 @@ export default {
   data () {
     return {
       // 初始化渲染页面使用的数据
-      city: '',
       swiperList: [],
       iconList: [],
       recommendList: [],
@@ -49,7 +48,6 @@ export default {
       // 数据获取成功,把获取到的数据传递给各个组件
       if (res.ret && res.data) {
         const data = res.data
-        this.city = data.city
         this.swiperList = data.swiperList
         this.recommendList = data.recommendList
         this.iconList = data.iconList
