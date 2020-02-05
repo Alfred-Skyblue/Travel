@@ -1,6 +1,10 @@
 # travel
 
 > A Vue.js project
+>
+> Author：、远方
+
+## 基于 Vue2.x 开发
 
 ## Build Setup
 
